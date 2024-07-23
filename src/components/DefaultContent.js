@@ -9,10 +9,10 @@ function DefaultContent() {
           <ul>
             <li>
               Lezzetli ve pratik yemek tariflerine
-              ulaşın,
+              ulaşın.
             </li>
-            <li>Farklı kategorilerdeki tarifleri keşfedin,</li>
-            <li>favorilerinizi ekleyin ve kendi tariflerinizi paylaşın.</li>
+            <li>Farklı kategorilerdeki tarifleri keşfedin.</li>
+            <li>Favorilerinizi ekleyin ve kendi tariflerinizi paylaşın.</li>
             Afiyet olsun!
           </ul>
         </div>

@@ -8,7 +8,7 @@ function Home() {
       <nav>
         <div className="logo" onClick={()=>navigate('/home')}></div>
         <div className="nav-button" onClick={()=>navigate('recipes')}>Tarifler</div>
-        <div className="nav-button" onClick={()=>navigate()}>Tarif ekle</div>
+        <div className="nav-button" onClick={()=>navigate()}>Favoriler</div>
         <div className="nav-button" onClick={()=>navigate()}>Profil</div>
         <div className="nav-button" onClick={()=>navigate()}>İletişim</div>
       </nav>
