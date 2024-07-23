@@ -1,0 +1,33 @@
+.recipes{
+    display: flex;
+    height: auto;
+    margin-top: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-section{
+    display: grid;
+    height: 70%;
+    width: auto;
+    background-color: rgb(255, 0, 0);
+    grid-template-columns: repeat(4,1fr);
+    border-radius: 30px;
+    gap: 1em;
+}
+.card{
+    height: 250px;
+    width: 200px;
+    border: 1px solid white;
+    background-color: rgb(255, 62, 62);
+    border-radius: 30px;
+    margin: 20px;
+}
+.card:hover{
+    background-color: rgb(252, 89, 89);
+    cursor: pointer;
+}
+.card:active{
+    background-color: rgb(255, 115, 115)
+}

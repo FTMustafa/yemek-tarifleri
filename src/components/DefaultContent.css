@@ -1,0 +1,32 @@
+.default-content{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-content-bg{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 400px;
+    width: 600px;
+    background-color: red;
+    border-radius: 30px 90px 30px 90px;
+    color: white;
+}
+
+.default-content-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
