@@ -13,7 +13,7 @@ function Recipes() {
           "https://www.themealdb.com/api/json/v1/1/categories.php"
         );
         console.log(response.data);
-        setVeri(response.data.categories); // Burada categories dizisini setVeri'ye atıyoruz
+        setVeri(response.data.categories);
       } catch (err) {
         console.error("Veri çekme sırasında bir hata oluştu:", err);
       }
