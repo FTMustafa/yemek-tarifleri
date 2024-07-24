@@ -5,25 +5,39 @@ import axios from "axios";
 function Recipes() {
   const [arama, setArama] = useState("");
   const [veri, setVeri] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const veriCek = async () => {
       try {
-        const response = await axios.get(
+        const categoriesResponse = await axios.get(
           "https://www.themealdb.com/api/json/v1/1/categories.php"
         );
-        console.log(response.data);
-        setVeri(response.data.categories);
+
+        const categories = categoriesResponse.data.categories;
+        let allMeals = [];
+
+        for (let category of categories) {
+          const mealsResponse = await axios.get(
+            `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category.strCategory}`
+          );
+          allMeals = [...allMeals, ...mealsResponse.data.meals];
+        }
+
+        setVeri(allMeals);
+        setLoading(false);
       } catch (err) {
         console.error("Veri çekme sırasında bir hata oluştu:", err);
+        setLoading(false);
       }
     };
 
     veriCek();
   }, []);
 
-  const filteredData = veri.filter((item) =>
-    item.strCategory.toLowerCase().includes(arama.toLowerCase())
+  const filteredData = veri.filter(
+    (item) =>
+      item.strMeal && item.strMeal.toLowerCase().includes(arama.toLowerCase())
   );
 
   return (
@@ -35,14 +49,18 @@ function Recipes() {
         onChange={(e) => setArama(e.target.value)}
         className="search-bar"
       />
-      <div className="card-section">
-        {filteredData.map((item) => (
-          <div key={item.idCategory} className="card">
-            <img src={item.strCategoryThumb}/>
-            {item.strCategory}
-          </div>
-        ))}
-      </div>
+      {loading ? (
+        <div className="loading">Yükleniyor...</div>
+      ) : (
+        <div className="card-section">
+          {filteredData.map((item) => (
+            <div key={item.idMeal} className="card">
+              <img src={item.strMealThumb} alt={item.strMeal} />
+              {item.strMeal}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />}>
             <Route index element={<DefaultContent />} />
-            <Route path="recipes" element={<Recipes></Recipes>}></Route>
+            <Route path="recipes" element={<Recipes/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

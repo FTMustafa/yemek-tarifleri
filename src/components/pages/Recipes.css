@@ -18,12 +18,20 @@
     font-family: "Ubuntu", sans-serif;
     border: 1px solid #ccc;
     padding-left: 20px;
-    background-image: url('..\\images\\search-icon.png'); /* Arama ikonu */
+    background-image: url('..\\images\\search-icon.png');
     background-size: 40px 40px;
     background-position: 95% center;
     background-repeat: no-repeat;
     padding-right: 40px;
-  }
+}
+
+.loading {
+    font-size: 30px;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(255, 62, 62);
+    text-align: center;
+    margin-top: 50px;
+}
 
 .card-section{
     display: grid;
@@ -38,6 +46,7 @@ img{
     height: 120px;
     width: 130px;
     border-radius: 50%;
+    border: 1px solid;
 }
 .card{
     display: flex;
@@ -46,13 +55,13 @@ img{
     color: white;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 250px;
     width: 200px;
     border: 1px solid white;
     background-color: rgb(255, 62, 62);
     border-radius: 30px;
     margin: 20px;
-    
 }
 .card:hover{
     background-color: rgb(252, 89, 89);
