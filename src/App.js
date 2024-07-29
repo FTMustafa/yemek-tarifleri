@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Home from "./components/Home";
 import DefaultContent from "./components/DefaultContent";
 import Recipes from "./components/pages/Recipes";
+import Meal from "./components/pages/Meal";
 function App() {
   
   {
@@ -22,6 +23,7 @@ function App() {
             <Route index element={<DefaultContent />} />
             <Route path="recipes" element={<Recipes/>}/>
           </Route>
+          <Route path="/meal" element={<Meal />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

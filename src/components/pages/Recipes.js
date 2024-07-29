@@ -1,5 +1,6 @@
 import "./Recipes.css";
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Recipes() {
@@ -35,10 +36,17 @@ function Recipes() {
     veriCek();
   }, []);
 
+  const navigate = useNavigate();
+
   const filteredData = veri.filter(
     (item) =>
       item.strMeal && item.strMeal.toLowerCase().includes(arama.toLowerCase())
   );
+
+  const goIngredientPage = (itemIndex) => {
+    const filteredMeal = veri.filter((item) => (itemIndex == item.idMeal));
+    navigate("/meal", { state: { filteredMeal } });
+  };
 
   return (
     <div className="recipes">
@@ -54,7 +62,12 @@ function Recipes() {
       ) : (
         <div className="card-section">
           {filteredData.map((item) => (
-            <div key={item.idMeal} className="card">
+            // navigate("/question-page", { state: {ders} })
+            <div
+              key={item.idMeal}
+              className="card"
+              onClick={() => goIngredientPage(item.idMeal)}
+            >
               <img src={item.strMealThumb} alt={item.strMeal} />
               {item.strMeal}
             </div>

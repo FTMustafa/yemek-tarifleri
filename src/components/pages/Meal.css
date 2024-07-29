@@ -1,0 +1,100 @@
+.meal {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  padding: 20px;
+}
+
+.meal-navbar {
+  display: flex;
+  width: auto;
+  justify-content: flex-start;
+}
+
+.meal-navButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meal-navButton:hover {
+  background-color: #ff4d4d;
+}
+
+.meal-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.meal-details img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+.yapilis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.icerik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.meal-details p {
+  max-width: 600px;
+}
+
+.meal-details h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 30px 90px 30px 90px;
+  color: rgb(255, 255, 255);
+  width: 500px;
+}
+
+.meal-details h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(255, 0, 0);
+  border-radius: 30px 90px 30px 90px;
+  width: 200px;
+  height: 40px;
+}
+
+.meal-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.meal-details li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  width: 600px;
+}
