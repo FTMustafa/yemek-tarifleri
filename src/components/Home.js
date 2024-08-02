@@ -10,7 +10,7 @@ function Home() {
         <div className="nav-button" onClick={()=>navigate('recipes')}>Tarifler</div>
         <div className="nav-button" onClick={()=>navigate()}>Favoriler</div>
         <div className="nav-button" onClick={()=>navigate()}>Profil</div>
-        <div className="nav-button" onClick={()=>navigate()}>İletişim</div>
+        <div className="nav-button" onClick={()=>navigate('contact')}>İletişim</div>
       </nav>
       <div className="var-page">
         <Outlet></Outlet>

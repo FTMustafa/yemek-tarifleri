@@ -4,8 +4,9 @@ import Home from "./components/Home";
 import DefaultContent from "./components/DefaultContent";
 import Recipes from "./components/pages/Recipes";
 import Meal from "./components/pages/Meal";
+import Contact from "./components/pages/Contact";
+
 function App() {
-  
   {
     /* {veri.categories?.map((item, index) => (
         <div key={index}>
@@ -21,7 +22,8 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />}>
             <Route index element={<DefaultContent />} />
-            <Route path="recipes" element={<Recipes/>}/>
+            <Route path="recipes" element={<Recipes />} />
+            <Route path="contact" element={<Contact />} />
           </Route>
           <Route path="/meal" element={<Meal />}></Route>
         </Routes>
