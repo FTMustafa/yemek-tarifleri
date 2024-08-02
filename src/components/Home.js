@@ -9,7 +9,7 @@ function Home() {
         <div className="logo" onClick={()=>navigate('/home')}></div>
         <div className="nav-button" onClick={()=>navigate('recipes')}>Tarifler</div>
         <div className="nav-button" onClick={()=>navigate()}>Favoriler</div>
-        <div className="nav-button" onClick={()=>navigate()}>Profil</div>
+        <div className="nav-button" onClick={()=>navigate('profile')}>Profil</div>
         <div className="nav-button" onClick={()=>navigate('contact')}>İletişim</div>
       </nav>
       <div className="var-page">

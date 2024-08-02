@@ -19,7 +19,7 @@
 
 .contact-block > h1,
 h3,
-p {
+.contact-block>p {
   color: white;
   height: 15px;
   width: 500px;

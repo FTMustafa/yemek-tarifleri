@@ -62,7 +62,6 @@ function Recipes() {
       ) : (
         <div className="card-section">
           {filteredData.map((item) => (
-            // navigate("/question-page", { state: {ders} })
             <div
               key={item.idMeal}
               className="card"
