@@ -1,11 +1,9 @@
-import './Profile.css'; // Profil sayfası için stil dosyası
+import "./Profile.css";
 
 function Profile() {
-
-
   return (
-    <div>
-      
+    <div className="profile">
+      <div className="profile-container"></div>
     </div>
   );
 }

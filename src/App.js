@@ -5,6 +5,8 @@ import DefaultContent from "./components/DefaultContent";
 import Recipes from "./components/pages/Recipes";
 import Meal from "./components/pages/Meal";
 import Contact from "./components/pages/Contact";
+import Profile from "./components/pages/Profile";
+import Favorites from "./components/pages/Favorites";
 
 function App() {
   {
@@ -24,6 +26,8 @@ function App() {
             <Route index element={<DefaultContent />} />
             <Route path="recipes" element={<Recipes />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="favorites" element={<Favorites/>} />
           </Route>
           <Route path="/meal" element={<Meal />}></Route>
         </Routes>
