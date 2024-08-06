@@ -26,7 +26,7 @@ nav {
   font-size: 30px;
   height: 80px;
   width: 150px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 60px;
   user-select: none;
 }

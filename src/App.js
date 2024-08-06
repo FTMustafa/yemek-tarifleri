@@ -7,15 +7,12 @@ import Meal from "./components/pages/Meal";
 import Contact from "./components/pages/Contact";
 import Profile from "./components/pages/Profile";
 import Favorites from "./components/pages/Favorites";
+import { useState } from "react";
+import Login from "./components/Login/Login";
+
 
 function App() {
-  {
-    /* {veri.categories?.map((item, index) => (
-        <div key={index}>
-          {item.strCategory}
-        </div>
-      ))} */
-  }
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
     <div className="app">
@@ -26,10 +23,11 @@ function App() {
             <Route index element={<DefaultContent />} />
             <Route path="recipes" element={<Recipes />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="favorites" element={<Favorites/>} />
+            <Route path="profile" element={<Profile setIsLogin={setIsLogin} />} />
+            <Route path="favorites" element={<Favorites />} />
           </Route>
-          <Route path="/meal" element={<Meal />}></Route>
+          <Route path="/meal" element={<Meal />} />
+          <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
         </Routes>
       </BrowserRouter>
     </div>
