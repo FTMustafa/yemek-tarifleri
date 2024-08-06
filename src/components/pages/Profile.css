@@ -2,23 +2,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 100%;
 }
 
 .profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 500px;
-  width: 500px;
+  justify-content: start;
+  height: 450px;
+  width: 450px;
   color: white;
   background-color: red;
   border-radius: 30px;
 }
 
-.profile-mid{
+.profile-mid {
   display: flex;
   flex-direction: column;
   align-items: start;
+  position: relative;
+  margin-top: 50px;
+}
+
+.profile-mid > button {
+  position: absolute;
+  background-color: white;
+  color: red;
+  border: none;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border: 1px solid;
+  margin-top: 135%;
+}
+
+.profile-mid > button:hover{
+  background-color: red;
+  color: white;
+  border: 1px solid white;
 }

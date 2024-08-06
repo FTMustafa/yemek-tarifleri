@@ -64,9 +64,9 @@ function Signin({ setIsSignIn }) {
 
   return (
     <div className="signin">
-      <div className="bg">
+      <div className="signin-bg">
         <form onSubmit={onFinish}>
-          <div className="form">
+          <div className="signin-form">
             <div className="girdi">
               <label>E-mail</label>
               <input

@@ -41,6 +41,7 @@ function Login({ setIsLogin }) {
       <div className="bg">
         <form onSubmit={onFinish}>
           <div className="form">
+            <h2>Giriş yap</h2>
             <div className="girdi">
               <label>E-mail</label>
               <input
@@ -62,15 +63,15 @@ function Login({ setIsLogin }) {
 
             <div className="girdi-bottom">
               <button type="button" onClick={() => setIsSignIn(true)}>
-                Profil oluştur
+                Kayıt ol
               </button>
-              <button type="submit">Giriş Yap</button>
+              <button type="submit">Giriş yap</button>
             </div>
           </div>
         </form>
         {isModalVisible && (
           <div className="modal">
-            <p>Yanlış email veya şifre</p>
+            <p>E-mail veya şifre yanlış!</p>
             <button onClick={handleOk}>Tamam</button>
           </div>
         )}

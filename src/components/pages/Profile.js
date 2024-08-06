@@ -11,10 +11,19 @@ function Profile() {
     const aktifKullanici = KisiListesi.find((k) => k.durum === true);
     if (aktifKullanici) {
       setUser(aktifKullanici);
+      setIsLogin(false);
     } else {
       setIsLogin(true); // Aktif kullanıcı yoksa login sayfasını göster
     }
-  }, []);
+  }, [isLogin]);
+
+  const handleLogout = () => {
+    if (user) {
+      user.durum = false;
+      setUser(null);
+      setIsLogin(true);
+    }
+  };
 
   if (isLogin) {
     return <Login setIsLogin={setIsLogin} />;
@@ -24,12 +33,21 @@ function Profile() {
     <div className="profile">
       {user ? (
         <div className="profile-container">
-          <h2>Profil Bilgileri</h2>
           <div className="profile-mid">
-          <p><strong>Ad:</strong> {user.ad}</p>
-          <p><strong>Soyad:</strong> {user.soyad}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Favori Yemekler:</strong> {user.favoriYemekler.join(', ')}</p>
+            <h2>Profil Bilgileri</h2>
+            <p>
+              <strong>Ad:</strong> {user.ad}
+            </p>
+            <p>
+              <strong>Soyad:</strong> {user.soyad}
+            </p>
+            <p>
+              <strong>Email:</strong> {user.email}
+            </p>
+            <p>
+              <strong>Favori Yemekler:</strong> {user.favoriYemekler.join(", ")}
+            </p>
+            <button onClick={handleLogout}>Çıkış yap</button>
           </div>
         </div>
       ) : (
