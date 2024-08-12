@@ -10,6 +10,8 @@
   display: flex;
   width: auto;
   justify-content: flex-start;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .meal-navButton {

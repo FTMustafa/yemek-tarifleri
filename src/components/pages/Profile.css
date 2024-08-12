@@ -20,7 +20,7 @@
 .profile-mid {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   position: relative;
   margin-top: 50px;
 }
@@ -36,7 +36,7 @@
   cursor: pointer;
   font-size: 16px;
   border: 1px solid;
-  margin-top: 135%;
+  margin-top: 340px;
 }
 
 .profile-mid > button:hover{
@@ -44,3 +44,23 @@
   color: white;
   border: 1px solid white;
 }
+
+.favorite-meals {
+  max-height: 100px; /* Maksimum yükseklik */
+  overflow-y: auto; /* Dikeyde kaydırılabilirlik */
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ccc; /* İsteğe bağlı, ayırıcı için */
+  border-radius: 5px;
+}
+
+.favorite-meals ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-meals li {
+  margin-bottom: 5px;
+}
+

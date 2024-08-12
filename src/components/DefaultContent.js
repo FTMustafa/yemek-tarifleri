@@ -12,7 +12,7 @@ function DefaultContent() {
               ulaşın.
             </li>
             <li>Farklı kategorilerdeki tarifleri keşfedin.</li>
-            <li>Favorilerinizi ekleyin ve kendi tariflerinizi paylaşın.</li>
+            <li>Favorilerinizi ekleyin ve istediğiniz zaman bakın.</li>
             Afiyet olsun!
           </ul>
         </div>
