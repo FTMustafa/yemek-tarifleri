@@ -17,7 +17,7 @@ function Meal() {
 
   useEffect(() => {
     const aktifKullanici = KisiListesi.find((k) => k.durum === true);
-    setUser(aktifKullanici); // Giriş yapmış kullanıcıyı al
+    setUser(aktifKullanici);
 
     if (aktifKullanici && filteredMeal.length > 0) {
       setIsFavorite(aktifKullanici.favoriYemekler.includes(filteredMeal[0].idMeal));

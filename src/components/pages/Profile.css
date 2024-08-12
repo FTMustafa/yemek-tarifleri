@@ -46,11 +46,11 @@
 }
 
 .favorite-meals {
-  max-height: 100px; /* Maksimum yükseklik */
-  overflow-y: auto; /* Dikeyde kaydırılabilirlik */
+  max-height: 100px;
+  overflow-y: auto;
   margin-top: 10px;
   padding: 5px;
-  border: 1px solid #ccc; /* İsteğe bağlı, ayırıcı için */
+  border: 1px solid rgb(190, 190, 190); 
   border-radius: 5px;
 }
 
